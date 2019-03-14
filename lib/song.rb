@@ -41,7 +41,9 @@ class Song
   
   def self.new_from_filename(file)
     # Thundercat - For Love I come - dance.mp3
-    binding.pry
+    info = file.split(" - ")
+    info[2].chomp(".mp3")
+    
   end
 end
 
