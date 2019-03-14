@@ -45,9 +45,8 @@ class Song
     info[2].chomp(".mp3")
     
     artist = Artist.find_or_create_by_name(info[0])
-    
-    
-    binding.pry
+    genre = Genre.find_or_create_by_name(info[2])
+    Song.new(info[1], artist, genre) if !Song.find_by_name(info[1])
   end
 end
 
