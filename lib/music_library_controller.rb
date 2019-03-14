@@ -1,9 +1,9 @@
 require 'pry'
 require_relative './music_importer.rb'
+require_relative './concerns/concerns.rb'
 require_relative './song.rb'
 require_relative './genre.rb'
 require_relative './artist.rb'
-require_relative './concerns/concerns.rb'
 class MusicLibraryController
   def initialize(path = "./db/mp3s")
     MusicImporter.new(path).import
