@@ -41,7 +41,7 @@ class Song
   
   def self.new_from_filename(file)
     # Thundercat - For Love I come - dance.mp3
-    puts file
+    binding.pry
   end
 end
 
