@@ -1,3 +1,4 @@
+require 'pry'
 class MusicLibraryController
   def initialize(path = "./db/mp3s")
     MusicImporter.new(path).import
@@ -13,8 +14,8 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     
-    input = nil
-    while input == nil
+    input = ""
+    while input == ""
       puts "What would you like to do?"
       input = gets
     end
