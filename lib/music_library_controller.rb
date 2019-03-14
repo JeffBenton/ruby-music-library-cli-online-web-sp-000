@@ -18,8 +18,8 @@ class MusicLibraryController
     while input != 'exit'
       puts "What would you like to do?"
       input = gets
+      binding.pry
     end
-    binding.pry
   end
   
   def list_songs
