@@ -19,4 +19,8 @@ class MusicLibraryController
       input = gets
     end
   end
+  
+  def list_songs
+    
+  end
 end
