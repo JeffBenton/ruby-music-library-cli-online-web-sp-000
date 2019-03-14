@@ -40,7 +40,6 @@ class Song
   end
   
   def self.new_from_filename(file)
-    # Thundercat - For Love I come - dance.mp3
     info = file.split(" - ")
     info[2].chomp!(".mp3")
     
@@ -50,7 +49,9 @@ class Song
   end
   
   def self.create_from_filename(file)
-    
+    song = self.new_from_filename(file)
+    song.save
+    song
   end
 end
 
