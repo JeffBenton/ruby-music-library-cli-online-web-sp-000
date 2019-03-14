@@ -43,6 +43,10 @@ class Song
     # Thundercat - For Love I come - dance.mp3
     info = file.split(" - ")
     info[2].chomp(".mp3")
+    
+    Artist.find_or_create_by_name(info[0])
+    
+    
     binding.pry
   end
 end
