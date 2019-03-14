@@ -22,6 +22,6 @@ class MusicLibraryController
   end
   
   def list_songs
-    Song.all.each { |song| puts  }
+    Song.all.each { |song| puts "" }
   end
 end
