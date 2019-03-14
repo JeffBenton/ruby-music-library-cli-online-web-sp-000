@@ -1,4 +1,3 @@
-require 'pry'
 class MusicLibraryController
   def initialize(path = "./db/mp3s")
     MusicImporter.new(path).import
@@ -20,6 +19,7 @@ class MusicLibraryController
       input = gets
       
       list_songs if input == "list songs"
+      list_artists if input == "list artists"
     end
   end
   
