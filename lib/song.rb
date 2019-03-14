@@ -42,7 +42,7 @@ class Song
   def self.new_from_filename(file)
     # Thundercat - For Love I come - dance.mp3
     info = file.split(" - ")
-    info[2].chomp(".mp3")
+    info[2].chomp!(".mp3")
     
     artist = Artist.find_or_create_by_name(info[0])
     genre = Genre.find_or_create_by_name(info[2])
