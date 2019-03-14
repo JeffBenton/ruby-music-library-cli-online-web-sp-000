@@ -40,5 +40,5 @@ class MusicLibraryController
   end
 end
 
-MLC = MusicLibraryController("./spec/fixtures/mp3s")
+MLC = MusicLibraryController.new("./spec/fixtures/mp3s")
 binding.pry
