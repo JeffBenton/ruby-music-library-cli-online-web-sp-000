@@ -43,8 +43,7 @@ class Song
     # Thundercat - For Love I come - dance.mp3
     info = file.split(" - ")
     info[2].chomp(".mp3")
-    song = Song.new(info[0], info[1], info[2]) if !self.find_by_name(info[0])
-    song.save
+    binding.pry
   end
 end
 
