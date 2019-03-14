@@ -40,7 +40,7 @@ class MusicLibraryController
   
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
-    artist = gets.strip!
+    artist = gets
     Song.all.delete_if { |song| song if song.artist.name != artist }.sort { |a, b| a.name <=> b.name }.each_with_index { |song, i| puts "#{i+1}. #{song.name} - #{song.genre.name}" }
     binding.pry
   end
