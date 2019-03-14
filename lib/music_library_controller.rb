@@ -46,4 +46,5 @@ class MusicLibraryController
 end
 
 MLC = MusicLibraryController.new("./spec/fixtures/mp3s")
-binding.pry
+MLC.list_songs
+#binding.pry
