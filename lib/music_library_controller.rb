@@ -43,6 +43,7 @@ class MusicLibraryController
     artist = gets
     # Song.all.collect { |song| song if song.artist.name == artist }.sort { |a, b| a.name <=> b.name }.each_with_index { |song, i| puts "#{i+1}. #{song.name} - #{song.genre.name}" }
     songs = Song.all.collect { |song| song if song.artist.name == artist }
+    binding.pry
     songs.sort! { |a, b| a.name <=> b.name }
     songs.each_with_index { |song, i| puts "#{i+1}. #{song.name} - #{song.genre.name}" }
   end
