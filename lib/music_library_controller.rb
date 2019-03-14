@@ -48,7 +48,9 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     num = gets
     songs = Song.all.sort { |a, b| a.name <=> b.name }
-    puts num.is_a? Integer
+    if !num.is_a? Integer
+      play_song
+    end
     # puts "Playing #{songs[num-1].name} by #{songs[num-1].artist.name}"
   end
 end
