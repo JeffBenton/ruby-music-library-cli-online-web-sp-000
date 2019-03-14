@@ -4,4 +4,6 @@ require 'pry'
 require_relative '../config/environment'
 
 MLC = MusicLibraryController.new.call
-binding.pry
+
+action = gets
+puts gets
