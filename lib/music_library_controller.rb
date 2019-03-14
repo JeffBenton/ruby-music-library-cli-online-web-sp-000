@@ -17,6 +17,7 @@ class MusicLibraryController
     while input != 'exit'
       puts "What would you like to do?"
       input = gets
+      puts input
     end
   end
   
@@ -53,6 +54,4 @@ class MusicLibraryController
     end
     puts "Playing #{songs[num-1].name} by #{songs[num-1].artist.name}"
   end
-  
-  
 end
