@@ -1,9 +1,3 @@
-require 'pry'
-require_relative './music_importer.rb'
-require_relative './concerns/concerns.rb'
-require_relative './song.rb'
-require_relative './genre.rb'
-require_relative './artist.rb'
 class MusicLibraryController
   def initialize(path = "./db/mp3s")
     MusicImporter.new(path).import
@@ -42,5 +36,8 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     artist = gets
     Song.all.delete_if { |song| song if song.artist.name != artist }.sort { |a, b| a.name <=> b.name }.each_with_index { |song, i| puts "#{i+1}. #{song.name} - #{song.genre.name}" }
+  end
+  
+  def list_songs_by_genre
   end
 end
