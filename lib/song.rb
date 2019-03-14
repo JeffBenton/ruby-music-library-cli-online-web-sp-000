@@ -44,7 +44,7 @@ class Song
     info = file.split(" - ")
     info[2].chomp(".mp3")
     
-    Artist.find_or_create_by_name(info[0])
+    artist = Artist.find_or_create_by_name(info[0])
     
     
     binding.pry
