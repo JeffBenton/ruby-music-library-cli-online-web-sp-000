@@ -34,6 +34,6 @@ class MusicLibraryController
   end
   
   def list_songs_by_artist
-    artist = gets
+    artist = gets("Please enter the name of an artist:")
   end
 end
