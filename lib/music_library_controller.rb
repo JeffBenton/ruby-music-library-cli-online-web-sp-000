@@ -14,7 +14,7 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     
     input = nil
-    while !input
+    while input == nil
       puts "What would you like to do?"
       input = gets
     end
